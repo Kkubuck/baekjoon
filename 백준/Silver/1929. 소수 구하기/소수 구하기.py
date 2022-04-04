@@ -1,17 +1,16 @@
-def isPrime(num):
-    if num == 1:
-        return False
+import math
+
+def prime(n):
+    if n ==1:
+        False
     else:
-        for i in range(2, int(num**0.5) + 1):
-            if num % i == 0:
+        for i in range(2, int(math.sqrt(n) + 1)):
+            if n%i==0:
                 return False
         return True
- 
- 
-M, N = map(int, input().split())
- 
-for i in range(M, N + 1):
-    if isPrime(i):
+    
+n, m =map(int, input().split())
+
+for i in range(n, m + 1):
+    if prime(i):
         print(i)
-
-
